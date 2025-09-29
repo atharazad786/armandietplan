@@ -18,12 +18,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Download Android SDK
+      - - name: Setup Android SDK
         uses: android-actions/setup-android@v2
-        with:
-          api-level: 34
-          target: default
-          ndk: false
 
       - name: Build Debug APK
         run: |
